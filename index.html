@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Tea Shop Software v1.0.0</title>
+
+<link rel="stylesheet" href="style.css">
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#8B4513">
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>☕ Tea Shop Software</h1>
+<p class="version">Version 1.0.0</p>
+
+<div class="card">
+
+<label>Product</label>
+
+<select id="product">
+<option>Tea</option>
+<option>Coffee</option>
+<option>Boost</option>
+<option>Horlicks</option>
+<option>Milk</option>
+<option>Biscuit</option>
+</select>
+
+<label>Price (₹)</label>
+<input type="number" id="price">
+
+<label>Quantity</label>
+<input type="number" id="qty" value="1">
+
+<button onclick="addSale()">Add Sale</button>
+
+</div>
+
+<h2>Today's Sales</h2>
+
+<table>
+
+<thead>
+
+<tr>
+<th>Product</th>
+<th>Qty</th>
+<th>Price</th>
+<th>Total</th>
+</tr>
+
+</thead>
+
+<tbody id="salesTable">
+
+</tbody>
+
+</table>
+
+<h2 id="grandTotal">Total Sales : ₹0</h2>
+
+<p class="footer">
+Developed by<br>
+<b>Precisz Analytics & Technology</b>
+</p>
+
+</div>
+
+<script src="script.js"></script>
+<script>
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.register("service-worker.js");
+}
+</script>
+
+</body>
+</html>
